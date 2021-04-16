@@ -1,0 +1,332 @@
+// Mixins animacao
+@mixin animation-name($aniname) {
+    -o-animation-name: $aniname;
+    -ms-animation-name: $aniname;
+    -webkit-animation-name: $aniname;
+    animation-name: $aniname;
+}
+@mixin animation-duration($duration) {
+    -o-animation-duration: $duration;
+    -ms-animation-duration: $duration;
+    -webkit-animation-duration: $duration;
+    animation-duration: $duration;
+}
+@mixin animation-duration($duration) {
+    -o-animation-duration: $duration;
+    -ms-animation-duration: $duration;
+    -webkit-animation-duration: $duration;
+    animation-duration: $duration;
+}
+@mixin animation-timing-function($timing) {
+    -o-animation-timing-function: $timing;
+    -ms-animation-timing-function: $timing;
+    -webkit-animation-timing-function: $timing;
+    animation-timing-function: $timing;
+}
+@mixin animation-iteration-count($count) {
+    -o-animation-iteration-count: $count;
+    -ms-animation-iteration-count: $count;
+    -webkit-animation-iteration-count: $count;
+    animation-iteration-count: $count;
+}
+@mixin animation-direction($direction) {
+    -o-animation-direction: $direction;
+    -ms-animation-direction: $direction;
+    -webkit-animation-direction: $direction;
+    animation-direction: $direction;
+}
+@mixin animation-fill-mode($fill) {
+    -o-animation-fill-mode: $fill;
+    -ms-animation-fill-mode: $fill;
+    -webkit-animation-fill-mode: $fill;
+    animation-fill-mode: $fill;
+}
+@mixin animation-play-state($state) {
+    -o-animation-play-state: $state;
+    -ms-animation-play-state: $state;
+    -webkit-animation-play-state: $state;
+    animation-play-state: $state;
+}
+@mixin animation($animation) {
+    -o-animation: $animation;
+    -ms-animation: $animation;
+    -webkit-animation: $animation;
+    animation: $animation;
+}
+
+@mixin transform($transform) {
+    -o-transform: $transform;
+    -ms-transform: $transform;
+    -webkit-transform: $transform;
+    transform: $transform;
+}
+
+@mixin transition($transition) {
+    -ms-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transition-property($property) {
+    -ms-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration) {
+    -ms-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing) {
+    -ms-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay) {
+    -ms-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+
+
+// App Mixins
+/**
+* Aplica a propriedade desejada para todos os prefixos dos browsers
+*
+* @param {string} $property - Propriedade que deseja aplicar os prefixos
+* @param {string} $value - Valor da propriedade a ser aplicado o prefixo
+*/
+@mixin vendor-prefixes($property, $value) {
+    #{$property}: $value;
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+}
+
+/**
+* Define as bordas arredondadas de um elemento
+*
+* @param {string} $radius - Texto com os valores da borda. Pode ser
+* o valor geral ou valores especificos para cada borda.
+*/
+@mixin border-radius($radius) {
+    @include vendor-prefixes(border-radius, $radius);
+}
+
+/**
+* Define as propriedades do placeholder do elemento
+*
+* @param {string} $color - Texto com o valor da cor
+*/
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;    
+  }
+  &::-moz-placeholder {
+    color: $color;     
+  }
+  &:-ms-input-placeholder {  
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+/**
+* Define o alinhamento vertical centralizado para o elemento
+*
+* @param {string} $position - Valor ja definido como absoluto para fazer
+* o alinhamento vertical do elemento.
+* @param {string} $top - Valor ja definido como 50% para fazer
+* o alinhamento vertical do elemento.
+*/
+@mixin vertical-align($position: absolute, $top: 50%) {
+  position: $position;
+  top: $top;
+  @include vendor-prefixes(transform, translateY(-50%));
+}
+
+/**
+* centerer
+**/
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    bottom: 50%;
+    transform: translate(0, 100%);
+  }
+
+  // @else if ($vertical) {
+  //   top: 50%;
+  //   transform: translate(0, -50%);
+  // } 
+}
+// box shadow
+@mixin box-shadow($shadow1, $shadow2:false) {
+ $params: $shadow1;
+  @if $shadow2 
+    { $params: $shadow1, $shadow2; }
+  -webkit-box-shadow: $params;
+     -moz-box-shadow: $params;
+          box-shadow: $params;
+}
+
+
+// filtros
+
+// grayscale      ex: filter: grayscale(100%);
+// sepia          ex: filter: sepia(100%);
+// saturate       ex: filter: saturate(0%);
+// hue-rotate     ex: filter: hue-rotate(45deg);
+// invert         ex: filter: invert(100%);
+// brightness     ex: filter: brightness(15%);
+// contrast       ex: filter: contrast(200%);
+// blur           ex: filter: blur(2px);
+
+@mixin filter($filter-type,$filter-amount) { 
+    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+    -o-filter: $filter-type+unquote('(#{$filter-amount})');
+    filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+
+//Aplica opacidade no elemento
+//@param {string} $opacity - Valor da opacidade (Ex: 0.5)
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+// make icon - icomoon
+@mixin makeIcon($arg, $val) {
+  .ion-ios-#{$arg}:before ,
+  .ion-ios-#{$arg}-circle:before ,
+  .ion-ios-#{$arg}-circle-outline:before ,
+  .ion-ios-#{$arg}-outline:before ,
+  .ion-md-#{$arg}:before ,
+  .ion-md-#{$arg}-circle:before ,
+  .ion-md-#{$arg}-circle-outline:before ,
+  .ion-md-#{$arg}-outline:before  {
+    content: $val;
+    font-size: 26px;
+  }
+}
+
+// Remove o ellipsis se o texto ultrapassar o max-width
+
+@mixin removeEllipsis(){
+  display: inline-block;
+  max-width: initial;
+  overflow: initial;
+  text-overflow: initial;
+  white-space: normal;
+}
+
+// This following mixin is modified from the original Bourbon triangle add-on (https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_triangle.scss) in order to customise triangle shape and foreground / background colours, which can also create CSS ribbon incredibly easy.
+
+// @include triangle($width $height, $foreground-color $background-color, $direction)
+// $height and $background-color can be omitted, if so, $height will equal to $width and $background-color will be transparent.
+// $direction contains the following arguments: up, down, left, right, up-right, up-left, down-right, down-left, inset-up, inset-down, inset-left, inset-right.
+
+@mixin triangle ($size, $color, $direction) {
+  height: 0;
+  width: 0;
+
+  $width: nth($size, 1);
+  $height: nth($size, length($size));
+
+  $foreground-color: nth($color, 1);
+  $background-color: transparent !default;
+  @if (length($color) == 2) {
+    $background-color: nth($color, 2);
+  }
+
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+
+    $width: $width / 2;
+
+    @if $direction == up {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-bottom: $height solid $foreground-color;
+
+    } @else if $direction == right {
+      border-top: $width solid $background-color;
+      border-bottom: $width solid $background-color;
+      border-left: $height solid $foreground-color;
+
+    } @else if $direction == down {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-top: $height solid $foreground-color;
+
+    } @else if $direction == left {
+      border-top: $width solid $background-color;
+      border-bottom: $width solid $background-color;
+      border-right: $height solid $foreground-color;
+    }
+  }
+
+  @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $height solid $foreground-color;
+
+    @if $direction == up-right {
+      border-left:  $width solid $background-color;
+
+    } @else if $direction == up-left {
+      border-right: $width solid $background-color;
+    }
+  }
+
+  @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $height solid $foreground-color;
+
+    @if $direction == down-right {
+      border-left:  $width solid $background-color;
+
+    } @else if $direction == down-left {
+      border-right: $width solid $background-color;
+    }
+  }
+
+  @else if ($direction == inset-up) {
+    border-width: $height $width;
+    border-style: solid;
+    border-color: $background-color $background-color $foreground-color;
+  }
+
+  @else if ($direction == inset-down) {
+    border-width: $height $width;
+    border-style: solid;
+    border-color: $foreground-color $background-color $background-color;
+  }
+
+  @else if ($direction == inset-right) {
+    border-width: $width $height;
+    border-style: solid;
+    border-color: $background-color $background-color $background-color $foreground-color;
+  }
+
+  @else if ($direction == inset-left) {
+    border-width: $width $height;
+    border-style: solid;
+    border-color: $background-color $foreground-color $background-color $background-color;
+  }
+}
+

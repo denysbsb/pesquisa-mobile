@@ -1,0 +1,50 @@
+{
+  "_from": "git+https://github.com/driftyco/cordova-plugin-wkwebview-engine.git#ef65cb604194921",
+  "_id": "cordova-plugin-wkwebview-engine@1.1.1-dev",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-wkwebview-engine",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/driftyco/cordova-plugin-wkwebview-engine.git#ef65cb604194921",
+    "rawSpec": "git+https://github.com/driftyco/cordova-plugin-wkwebview-engine.git#ef65cb604194921",
+    "saveSpec": "git+https://github.com/driftyco/cordova-plugin-wkwebview-engine.git#ef65cb604194921",
+    "fetchSpec": "https://github.com/driftyco/cordova-plugin-wkwebview-engine.git",
+    "gitCommittish": "ef65cb604194921"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/driftyco/cordova-plugin-wkwebview-engine.git#ef65cb6041949210b8e1680d9a2ef1feb3ebc9b1",
+  "_spec": "git+https://github.com/driftyco/cordova-plugin-wkwebview-engine.git#ef65cb604194921",
+  "_where": "/Users/marioeugenio/Sites/htdocs/PESSOAL/pesquisa",
+  "author": {
+    "name": "Apache Cordova"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "The official Apache Cordova WKWebView Engine Plugin",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "keywords": [
+    "cordova",
+    "wkwebview"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "name": "cordova-plugin-wkwebview-engine",
+  "repository": {
+    "type": "git",
+    "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-wkwebview-engine.git"
+  },
+  "scripts": {
+    "jshint": "jshint src",
+    "objc-tests": "cd tests/ios && npm test",
+    "preobjc-tests": "cd tests/ios && npm install",
+    "test": "npm run jshint && npm run objc-tests"
+  },
+  "version": "1.1.1-dev"
+}

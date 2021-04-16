@@ -1,0 +1,35 @@
+page-quiz {
+  .list-quiz {
+    margin-top: 20px;
+  }
+
+  .button-sync {
+    background-color: #0097C0;
+  }
+
+  .list-header {
+    margin-bottom: 3px;
+
+    .label {
+      color: #FFF;
+    }
+  }
+
+  .item {
+    border-radius: 0;
+    background-color: color($colors, lightbg);
+
+    .period {
+      font-size: 11px;
+    }
+
+    span {
+      background-color: color($colors, caution);
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 10px;
+      color: #FFF;
+      float: right;
+    }
+  }
+}

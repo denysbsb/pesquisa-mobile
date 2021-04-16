@@ -1,0 +1,23 @@
+<ion-content>
+  <img class="logo" src="assets/icon/logo.png">
+  <div class="content">
+    <button ion-button block class="start" disabled="true" type="button" (click)="startQuiz()">
+      INICIAR PESQUISA
+    </button>
+    <div class="relatorio-final">
+      <p><span>Tem Registros: </span>{{registro}}</p>
+      <p *ngIf="registro === 'SIM'"><span>Nº de pesquisas: </span>{{nuPesuquisa}}</p><br><br>
+
+      <button *ngIf="registro === 'SIM'" ion-button block class="start" type="button" (click)="sendEmail()">
+        ENVIAR PESQUISA
+      </button>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="contact">
+    <div class="title">RMI Tecnologia - V0.1.9</div>
+    <div class="phone">tel.: (61) 99334-5445</div>
+  </div>
+</ion-footer>

@@ -1,0 +1,8 @@
+{
+  "name": "ionic2-app-base",
+  "integrations": {
+    "cordova": {}
+  },
+  "typescript": true,
+  "v2": true
+}

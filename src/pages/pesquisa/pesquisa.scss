@@ -1,0 +1,60 @@
+page-pesquisa {
+  .title-question {
+    color: #FFF;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  ion-slides {
+    height: auto;
+  }
+
+  .item {
+    background-color: transparent;
+
+    .label {
+      white-space: normal;
+      overflow: scroll;
+      text-overflow: unset;
+    }
+  }
+
+  .btn-back {
+    float: left;
+  }
+
+  .btn-forward {
+    float: right;
+    margin-left: 10px;
+  }
+
+  .scroll-content {
+    padding-top: 0px !important;
+  }
+
+  .slides {
+    .swiper-slide {
+      padding: 0px 10px;
+      img {
+        width: 160px;
+        @include border-radius(100px);
+        // opacity: 0;
+      }
+      color: color($colors, white);
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        // height: 48px;
+      }
+      p {
+        font-size: 1.5rem;
+        opacity: .7;
+        // height: 88px;
+      }
+      hr {
+        position: absolute;
+        margin-top: 30px;
+      }
+    }
+  }
+}

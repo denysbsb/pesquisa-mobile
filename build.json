@@ -1,0 +1,10 @@
+{
+  "android": {
+    "debug": {}
+},
+  "ios": {
+    "debug": {
+      "developmentTeam": "685ED4TK2T"
+    }
+  }
+}

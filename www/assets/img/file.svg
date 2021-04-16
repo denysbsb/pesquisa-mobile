@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="32px" height="32px" viewBox="1.5 6 32 32" enable-background="new 1.5 6 32 32" xml:space="preserve">
+<g>
+	<title>Group 10</title>
+	<desc>Created with Sketch.</desc>
+	<g id="Mask">
+		<path id="path-1_1_" fill="#E7D4CA" d="M7.153,6.682h13.393l9.139,9.191V35.48l0,0c0,1.015-0.823,1.838-1.838,1.838H7.153l0,0
+			c-1.015,0-1.838-0.823-1.838-1.838V8.52l0,0C5.315,7.505,6.138,6.682,7.153,6.682z"/>
+	</g>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="20.546" y="6.682" width="9.139" height="9.191">
+			<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="20.546" y="6.682" width="9.139" height="9.191" id="mask-2">
+		<g filter="url(#Adobe_OpacityMaskFilter)">
+			<path id="path-1" fill="#FFFFFF" d="M7.153,6.682h13.393l9.139,9.191V35.48l0,0c0,1.015-0.823,1.838-1.838,1.838H7.153l0,0
+				c-1.015,0-1.838-0.823-1.838-1.838V8.52l0,0C5.315,7.505,6.138,6.682,7.153,6.682z"/>
+		</g>
+	</mask>
+	<path id="Rectangle-6-Copy" mask="url(#mask-2)" fill="#C8B5AE" d="M20.546,6.682h9.139v9.191h-7.301l0,0
+		c-1.015,0-1.838-0.823-1.838-1.838V6.682z"/>
+</g>
+</svg>

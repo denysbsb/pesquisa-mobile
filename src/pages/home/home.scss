@@ -1,0 +1,52 @@
+page-home {
+  
+  button {
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 1.4rem;
+    @include border-radius(100px);
+    text-transform: uppercase;
+    color: black;
+    background-color: color($colors, primary);
+    &.activated {
+      background-color: darken(color($colors, primary), 5%);
+    }
+  }
+
+
+}
+
+.relatorio-final {
+  font-size: 15px;
+  color: #FFF;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  margin-top: 40%;
+  margin-bottom: 20px;
+}
+
+.start {
+  font-size: 15px !important;
+  margin: auto;
+  background-color: color($colors, caution);
+}
+
+.contact {
+  margin-top: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFF;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+
+  .phone {
+    font-size: 10px;
+    font-weight: normal;
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    },
+    "cordova-plugin-wkwebview-engine": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    },
+    "cordova-plugin-dreamover-uid": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    },
+    "cordova-plugin-email-composer": {
+      "PACKAGE_NAME": "com.br.axiomaxbrasil"
+    }
+  },
+  "dependent_plugins": {}
+}
